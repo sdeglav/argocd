@@ -8,8 +8,6 @@ image:
   repository: cr.yandex/crprhclm83hhnolm61f4/crm-back
   tag: main-56b8905
   pullPolicy: IfNotPresent
-  # Overrides the image tag whose default is the chart appVersion.
-  tag: ""
 
 imagePullSecrets: []
 nameOverride: ""

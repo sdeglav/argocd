@@ -105,6 +105,5 @@ tolerations: []
 
 affinity: {}
 
-env: {
+env: 
   xxx: xxxxxxxxx
-}

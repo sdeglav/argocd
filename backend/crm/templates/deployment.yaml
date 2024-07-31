@@ -51,9 +51,7 @@ spec:
           {{- with .Values.volumeMounts }}
           volumeMounts:
             {{- toYaml . | nindent 12 }}
-          {{- end }}
-          env:
-            {{- toYaml .Values.env | nindent 12 }}
+          {{- end }} 
 
 
       {{- with .Values.volumes }}

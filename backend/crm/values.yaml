@@ -104,3 +104,7 @@ nodeSelector: {}
 tolerations: []
 
 affinity: {}
+
+env: {
+  xxx: xxxxxxxxx
+}

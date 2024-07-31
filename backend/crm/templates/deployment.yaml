@@ -38,6 +38,8 @@ spec:
             {{- toYaml .Values.securityContext | nindent 12 }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
+          env:
+            {{- toYaml .Values.env | nindent 12 }}
           ports:
             - name: http
               containerPort: {{ .Values.service.port }}
@@ -52,19 +54,6 @@ spec:
           volumeMounts:
             {{- toYaml . | nindent 12 }}
           {{- end }}
-          env:
-    {{ $files := .Files }}
-    {{- range tuple ".dev" -}}
-        {{- $file := $files.Get . | trimSuffix "\n" -}}
-        {{- range $line := splitList "\n" $file -}}
-          {{- $kv := splitList "=" $line -}}
-          {{- $k := first $kv -}}
-          {{- $v := last $kv -}}
-          {{- printf "- name: \"%s\"\n" $k | indent 8 }}
-          {{- printf "  value: \"%s\"\n" $v }}
-        {{- end }}
-    {{- end }}
-
 
       {{- with .Values.volumes }}
       volumes:

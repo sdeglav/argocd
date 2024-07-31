@@ -54,7 +54,7 @@ spec:
           {{- end }} 
           envFrom:
           - secretRef:
-              name: my-env-list
+              name: backend-dev
 
       {{- with .Values.volumes }}
       volumes:

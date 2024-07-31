@@ -104,3 +104,7 @@ nodeSelector: {}
 tolerations: []
 
 affinity: {}
+
+env: 
+  - name: qqqq
+    value: rrrrr

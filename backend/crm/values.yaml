@@ -47,13 +47,17 @@ service:
 ingress:
   enabled: true
   className: "nginx"
-  annotations: {}
+  annotations: 
+    #ingress.alb.yc.io/subnets: <список_идентификаторов_подсетей>
+    #ingress.alb.yc.io/security-groups: <список_идентификаторов_групп_безопасности>
+    ingress.alb.yc.io/external-ipv4-address: auto
+    ingress.alb.yc.io/group-name: my-ingress-group
     # kubernetes.io/ingress.class: nginx
     # kubernetes.io/tls-acme: "true"
   hosts:
-    - host: k.oviovi.site
+    - host: oviovi.site
       paths:
-        - path: /
+        - path: /api-devlet/
           pathType: ImplementationSpecific
   tls: []
   #  - secretName: chart-example-tls

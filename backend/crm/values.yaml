@@ -60,10 +60,15 @@ ingress:
       paths:
         - path: /api/
           pathType: Prefix
+    - host: devlet.oviovi.site
+      paths:
+        - path: /api/
+          pathType: Prefix
   tls: 
     - secretName: yc-certmgr-cert-id-fpqrmg6jueflborli9j3
       hosts:
         - k8s.oviovi.site
+        - devlet.oviovi.site
 
 resources: {}
   # We usually recommend not to specify default resources and to leave this as a conscious

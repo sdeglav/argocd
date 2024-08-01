@@ -54,6 +54,7 @@ ingress:
     ingress.alb.yc.io/group-name: my-ingress-group
     # kubernetes.io/ingress.class: nginx
     # kubernetes.io/tls-acme: "true"
+    ingress.alb.yc.io/prefix-rewrite: /
   hosts:
     - host: k8s.oviovi.site
       paths:

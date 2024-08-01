@@ -51,7 +51,7 @@ ingress:
     ingress.alb.yc.io/subnets: dev-ru-central1-a
     #ingress.alb.yc.io/security-groups: <список_идентификаторов_групп_безопасности>
     ingress.alb.yc.io/external-ipv4-address: auto
-    ingress.alb.yc.io/group-name: my-ingress-group-2
+    ingress.alb.yc.io/group-name: my-ingress-group
     # kubernetes.io/ingress.class: nginx
     # kubernetes.io/tls-acme: "true"
   hosts:

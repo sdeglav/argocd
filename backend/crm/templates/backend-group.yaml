@@ -1,0 +1,14 @@
+apiVersion: alb.yc.io/v1alpha1
+kind: HttpBackendGroup
+metadata:
+  name: ybackendgroup
+spec:
+  backends:
+    - name: crm-backend
+      weight: 1
+      useHttp2: true
+      service:
+         name: crm-backend
+         port:
+           name: http
+           number: 8080

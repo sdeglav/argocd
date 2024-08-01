@@ -55,6 +55,8 @@ spec:
               {{- else }}
               serviceName: {{ $fullName }}
               servicePort: {{ $svcPort }}
+              resource:
+                name: ybackendgroup
               {{- end }}
           {{- end }}
     {{- end }}

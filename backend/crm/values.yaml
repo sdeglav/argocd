@@ -48,7 +48,7 @@ ingress:
   enabled: true
   className: "nginx"
   annotations: 
-    #ingress.alb.yc.io/subnets: <список_идентификаторов_подсетей>
+    ingress.alb.yc.io/subnets: dev-ru-central1-a
     #ingress.alb.yc.io/security-groups: <список_идентификаторов_групп_безопасности>
     ingress.alb.yc.io/external-ipv4-address: auto
     ingress.alb.yc.io/group-name: my-ingress-group
@@ -58,7 +58,7 @@ ingress:
     - host: oviovi.site
       paths:
         - path: /api-devlet/
-          pathType: ImplementationSpecific
+          pathType: Prefix #ImplementationSpecific
   tls: 
     - secretName: yc-certmgr-cert-id-fpqrmg6jueflborli9j3
       hosts:

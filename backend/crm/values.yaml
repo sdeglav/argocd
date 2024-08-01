@@ -58,7 +58,7 @@ ingress:
     - host: k8s.oviovi.site
       paths:
         - path: /
-          pathType: Prefix #ImplementationSpecific
+          pathType: ImplementationSpecific
   tls: 
     - secretName: yc-certmgr-cert-id-fpqrmg6jueflborli9j3
       hosts:

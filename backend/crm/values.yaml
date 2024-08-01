@@ -46,7 +46,7 @@ service:
 
 ingress:
   enabled: true
-  className: "yalb"
+  className: "nginx"
   annotations: 
     ingress.alb.yc.io/subnets: dev-ru-central1-a
     #ingress.alb.yc.io/security-groups: <список_идентификаторов_групп_безопасности>

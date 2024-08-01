@@ -7,4 +7,4 @@ metadata:
   annotations:
     ingressclass.kubernetes.io/is-default-class: true
 spec:
-  controller: <string>
+  controller: ingress.alb.yc.io/yc-alb-ingress-controller

@@ -59,10 +59,10 @@ ingress:
       paths:
         - path: /api-devlet/
           pathType: ImplementationSpecific
-  tls: []
-  #  - secretName: chart-example-tls
-  #    hosts:
-  #      - chart-example.local
+  tls: 
+    - secretName: yc-certmgr-cert-id-fpqrmg6jueflborli9j3
+      hosts:
+        - oviovi.site
 
 resources: {}
   # We usually recommend not to specify default resources and to leave this as a conscious

@@ -55,7 +55,7 @@ ingress:
     # kubernetes.io/ingress.class: nginx
     # kubernetes.io/tls-acme: "true"
   hosts:
-    - host: k.oviovi.site
+    - host: k8s.oviovi.site
       paths:
         - path: /api-devlet/
           pathType: Prefix #ImplementationSpecific

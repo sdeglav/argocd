@@ -45,7 +45,7 @@ service:
   targetPort: 8080
 
 ingress:
-  enabled: true
+  enabled: false
   className: "yalb"
   annotations: 
     ingress.alb.yc.io/subnets: e9bb257894i4kjfil6v5

@@ -56,8 +56,7 @@ spec:
           envFrom:
           - secretRef:
               name: backend-dev
-
-        {{- if .Values.postgres.enabled -}}
+        {{- if .Values.postgres.enabled }}
         - name: postgres
           image: 'postgres:16'
           imagePullPolicy: IfNotPresent

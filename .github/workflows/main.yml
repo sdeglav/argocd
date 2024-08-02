@@ -39,22 +39,17 @@ jobs:
   update:
     needs:
       - prepare
-    env:
-      VERSION: ${{ needs.prepare.outputs.version }}
-      COMMIT: ${{ needs.prepare.outputs.commit }}
-      BRANCH: ${{ needs.prepare.outputs.branch }}
-      TAG: ${{ needs.prepare.outputs.tag }}
     name: Update CRM Version
     runs-on: ubuntu-latest 
 
     steps:
     - name: Check out code
       uses: actions/checkout@v2
-
+ 
     - name: Update Image Tag Values
       uses: mikefarah/yq@master
       with:
-        cmd: yq -i  '.image.tag = "${{TAG}}"' "./backend/crm/values-dev.yaml"
+        cmd: yq -i  '.image.tag = "${{ needs.prepare.outputs.tag }}"' "./backend/crm/values-dev.yaml"
     
     - name: Commit the changes made
       run: | 

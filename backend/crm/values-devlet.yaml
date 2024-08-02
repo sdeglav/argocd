@@ -1,9 +1,8 @@
 
 image:
   repository: cr.yandex/crprhclm83hhnolm61f4/crm-back
-  tag: main-56b8905
+  tag: main-2a3121a
   pullPolicy: IfNotPresent
-
 
 ingress:
   enabled: true

@@ -57,7 +57,7 @@ spec:
           - secretRef:
               name: backend-dev
         {{- if .Values.postgres.enabled }}
-        - name: postgres
+        - name: {{ .Chart.Name }}-postgres
           image: 'postgres:16'
           imagePullPolicy: IfNotPresent
           ports:

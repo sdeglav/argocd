@@ -1,5 +1,5 @@
 
 image:
   repository: cr.yandex/crprhclm83hhnolm61f4/crm-back
-  tag: main
+  tag: main-2eb529b
   pullPolicy: IfNotPresent

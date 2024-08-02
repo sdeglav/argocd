@@ -57,6 +57,17 @@ spec:
           - secretRef:
               name: backend-dev
 
+        {{- if .Values.postgres.enabled -}}
+        - name: postgres
+          image: 'postgres:16'
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 5432
+          envFrom:
+            - configMapRef:
+                name: postgres-secret
+        {{- end }}
+
       {{- with .Values.volumes }}
       volumes:
         {{- toYaml . | nindent 8 }}

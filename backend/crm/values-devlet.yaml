@@ -24,3 +24,6 @@ ingress:
     - secretName: yc-certmgr-cert-id-fpqrmg6jueflborli9j3
       hosts:
         - k8s.oviovi.site
+
+postgres:
+  enabled: true

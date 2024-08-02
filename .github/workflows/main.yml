@@ -54,7 +54,7 @@ jobs:
     - name: Update Image Tag Values
       uses: mikefarah/yq@master
       with:
-        cmd: yq -i  '.image.tag = "$TAG"' "./backend/crm/values-dev.yaml"
+        cmd: yq -i  '.image.tag = "${{TAG}}"' "./backend/crm/values-dev.yaml"
     
     - name: Commit the changes made
       run: | 

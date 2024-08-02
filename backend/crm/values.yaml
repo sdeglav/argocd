@@ -10,6 +10,8 @@ image:
   tag: main-56b8905
   pullPolicy: IfNotPresent
 
+secretsRef: backend-dev
+
 imagePullSecrets: []
 nameOverride: ""
 fullnameOverride: ""

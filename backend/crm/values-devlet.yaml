@@ -4,7 +4,7 @@ image:
   tag: main-2a3121a
   pullPolicy: IfNotPresent
 
-secretsRef: backend-devlet
+secretRef: backend-devlet
 
 ingress:
   enabled: true

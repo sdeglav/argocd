@@ -31,8 +31,6 @@ spec:
       serviceAccountName: {{ include "crm.serviceAccountName" . }}
       securityContext:
         {{- toYaml .Values.podSecurityContext | nindent 8 }}
-      imagePullSecrets:
-          - name: regcred
       containers:
         - name: {{ .Chart.Name }}
           securityContext:

@@ -72,6 +72,9 @@ spec:
           image: redis:latest
           command:
             - redis-server
+          env:
+          - name: REDIS_PASSWORD
+            value: "secret"
           ports:
           - containerPort: 6379
           resources:

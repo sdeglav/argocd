@@ -1,7 +1,7 @@
 
 image:
   repository: cr.yandex/crprhclm83hhnolm61f4/crm-back
-  tag: main-2a3121a
+  tag: devlet-bd2825b
   pullPolicy: IfNotPresent
 
 secretRef: backend-pushkarskii

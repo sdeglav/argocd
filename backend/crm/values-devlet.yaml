@@ -4,6 +4,8 @@ image:
   tag: main-2a3121a
   pullPolicy: IfNotPresent
 
+replicaCount: 1
+
 secretRef: backend-devlet
 
 ingress:

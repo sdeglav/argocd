@@ -53,7 +53,7 @@ postgres:
   enabled: false
 
 redis:
-  enable: false
+  enabled: true
 
 resources:
   go:

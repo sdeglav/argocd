@@ -30,4 +30,4 @@ postgres:
   enabled: true
 
 redis:
-  enable: true
+  enabled: true

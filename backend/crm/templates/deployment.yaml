@@ -72,9 +72,6 @@ spec:
           image: redis:latest
           command:
             - redis-server
-          env:
-          - name: MASTER
-            value: "true"
           ports:
           - containerPort: 6379
           resources:

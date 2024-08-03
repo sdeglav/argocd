@@ -53,12 +53,20 @@ postgres:
   enabled: false
 
 resources:
-  limits:
-    cpu: 300m
-    memory: 256Mi
-  requests:
-    cpu: 300m
-    memory: 256Mi
+  go:
+    limits:
+      cpu: 300m
+      memory: 256Mi
+    requests:
+      cpu: 300m
+      memory: 256Mi
+  postgres:
+    limits:
+      cpu: 300m
+      memory: 256Mi
+    requests:
+      cpu: 300m
+      memory: 256Mi
 
 livenessProbe:
   httpGet:

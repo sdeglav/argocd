@@ -48,7 +48,7 @@ spec:
           readinessProbe:
             {{- toYaml .Values.readinessProbe | nindent 12 }}
           resources:
-            {{- toYaml .Values.resources | nindent 12 }}
+            {{- toYaml .Values.resources.go | nindent 12 }}
           {{- with .Values.volumeMounts }}
           volumeMounts:
             {{- toYaml . | nindent 12 }}
@@ -66,6 +66,8 @@ spec:
           envFrom:
             - configMapRef:
                 name: postgres-secret
+          resources:
+            {{- toYaml .Values.resources.postgres | nindent 12 }}
         {{- end }}
 
       {{- with .Values.volumes }}

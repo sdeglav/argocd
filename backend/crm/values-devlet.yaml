@@ -17,6 +17,7 @@ ingress:
     # kubernetes.io/ingress.class: nginx
     # kubernetes.io/tls-acme: "true"
     ingress.alb.yc.io/prefix-rewrite: /
+    ingress.alb.yc.io/protocol: http2
   hosts:
     - host: k8s.oviovi.site
       paths:

@@ -67,6 +67,19 @@ spec:
           resources:
             {{- toYaml .Values.resources.postgres | nindent 12 }}
         {{- end }}
+        {{- if .Values.redis.enabled }}
+        - name: redis
+          image: redis:latest
+          command:
+            - redis-server
+          env:
+          - name: MASTER
+            value: "true"
+          ports:
+          - containerPort: 6379
+          resources:
+            {{- toYaml .Values.resources.redis | nindent 12 }}
+        {{- end }}
 
       {{- with .Values.volumes }}
       volumes:

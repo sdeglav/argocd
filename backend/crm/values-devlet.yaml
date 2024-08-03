@@ -28,3 +28,6 @@ ingress:
         - k8s.oviovi.site
 postgres:
   enabled: true
+
+redis:
+  enable: true

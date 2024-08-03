@@ -59,6 +59,7 @@ spec:
         {{- if .Values.postgres.enabled }}
         - name: postgres
           image: 'postgres:16'
+          args: ["-c", "max_connections=200"]
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 5432

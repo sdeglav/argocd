@@ -3,6 +3,9 @@ image:
   repository: cr.yandex/crprhclm83hhnolm61f4/crm-back
   tag: main-e17649d
   pullPolicy: IfNotPresent
+
+secretRef: backend-dev
+
 ingress:
   enabled: true
   className: "yalb"

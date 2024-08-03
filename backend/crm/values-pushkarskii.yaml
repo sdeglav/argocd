@@ -4,6 +4,8 @@ image:
   tag: main-2a3121a
   pullPolicy: IfNotPresent
 
+secretRef: backend-pushkarskii
+
 ingress:
   enabled: true
   className: "yalb"

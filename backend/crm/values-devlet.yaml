@@ -3,8 +3,9 @@ image:
   repository: cr.yandex/crprhclm83hhnolm61f4/crm-back
   tag: devlet-bd2825b
   pullPolicy: IfNotPresent
-replicaCount: 1
+
 secretRef: backend-devlet
+
 ingress:
   enabled: true
   className: "yalb"

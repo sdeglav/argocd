@@ -55,15 +55,15 @@ postgres:
 resources:
   go:
     limits:
-      cpu: 300m
+      cpu: 1000m
       memory: 256Mi
     requests:
       cpu: 300m
-      memory: 256Mi
+      memory: 2048Mi
   postgres:
     limits:
-      cpu: 300m
-      memory: 256Mi
+      cpu: 1000m
+      memory: 2048Mi
     requests:
       cpu: 300m
       memory: 256Mi

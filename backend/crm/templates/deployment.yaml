@@ -63,7 +63,7 @@ spec:
             - containerPort: 5432
           envFrom:
             - configMapRef:
-                name: {{ .Chart.Name }}-postgres-secret
+                name: {{ include "crm.fullname" . }}-postgres-secret
           resources:
             {{- toYaml .Values.resources.postgres | nindent 12 }}
         {{- end }}

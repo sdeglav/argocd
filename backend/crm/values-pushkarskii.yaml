@@ -1,15 +1,13 @@
 
 image:
   repository: cr.yandex/crprhclm83hhnolm61f4/crm-back
-  tag: devlet-bd2825b
+  tag: pushkarskii-b5c7bbd
   pullPolicy: IfNotPresent
-
 secretRef: backend-pushkarskii
-
 ingress:
   enabled: true
   className: "yalb"
-  annotations: 
+  annotations:
     ingress.alb.yc.io/subnets: e9bb257894i4kjfil6v5
     #ingress.alb.yc.io/security-groups: <список_идентификаторов_групп_безопасности>
     ingress.alb.yc.io/external-ipv4-address: auto
@@ -22,10 +20,9 @@ ingress:
       paths:
         - path: /api-pushkarskii/
           pathType: Prefix
-  tls: 
+  tls:
     - secretName: yc-certmgr-cert-id-fpqrmg6jueflborli9j3
       hosts:
         - k8s.oviovi.site
-        
 postgres:
   enabled: true

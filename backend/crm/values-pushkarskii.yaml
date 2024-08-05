@@ -1,7 +1,7 @@
 
 image:
   repository: cr.yandex/crprhclm83hhnolm61f4/crm-back
-  tag: pushkarskii-b5c7bbd
+  tag: pushkarskii-34390ec
   pullPolicy: IfNotPresent
 secretRef: backend-pushkarskii
 ingress:

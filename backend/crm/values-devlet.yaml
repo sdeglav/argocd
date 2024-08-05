@@ -1,7 +1,7 @@
 
 image:
   repository: cr.yandex/crprhclm83hhnolm61f4/crm-back
-  tag: devlet-3fc5f43
+  tag: devlet-e04d37a
   pullPolicy: IfNotPresent
 secretRef: backend-devlet
 ingress:

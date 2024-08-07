@@ -20,7 +20,12 @@ ingress:
       paths:
         - path: /
           pathType: Prefix
+    - host: main.oviovi.site
+      paths:
+        - path: /
+          pathType: Prefix
   tls:
     - secretName: yc-certmgr-cert-id-fpqrmg6jueflborli9j3
       hosts:
         - oviovi.site
+        - main.oviovi.site

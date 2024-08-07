@@ -1,7 +1,7 @@
 
 image:
   repository: cr.yandex/crprhclm83hhnolm61f4/crm-back
-  tag: main-bc511d4
+  tag: main-3f62220
   pullPolicy: IfNotPresent
 secretRef: backend-dev
 ingress:

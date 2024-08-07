@@ -3,7 +3,7 @@ image:
   repository: cr.yandex/crprhclm83hhnolm61f4/crm-front
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "tkachuk-ef869ae"
+  tag: "tkachuk-455a74e"
 ingress:
   enabled: true
   className: "yalb"

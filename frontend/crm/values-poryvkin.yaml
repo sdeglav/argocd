@@ -1,0 +1,26 @@
+
+image:
+  repository: cr.yandex/crprhclm83hhnolm61f4/crm-front
+  pullPolicy: IfNotPresent
+  # Overrides the image tag whose default is the chart appVersion.
+  tag: "tkachuk-486e34f"
+ingress:
+  enabled: true
+  className: "yalb"
+  annotations:
+    ingress.alb.yc.io/subnets: e9bb257894i4kjfil6v5
+    #ingress.alb.yc.io/security-groups: <список_идентификаторов_групп_безопасности>
+    ingress.alb.yc.io/external-ipv4-address: auto
+    ingress.alb.yc.io/group-name: my-ingress-group
+    # kubernetes.io/ingress.class: nginx
+    # kubernetes.io/tls-acme: "true"
+    ingress.alb.yc.io/prefix-rewrite: /
+  hosts:
+    - host: poryvkin.oviovi.site
+      paths:
+        - path: /
+          pathType: Prefix
+  tls:
+    - secretName: yc-certmgr-cert-id-fpqrmg6jueflborli9j3
+      hosts:
+        - poryvkin.oviovi.site
